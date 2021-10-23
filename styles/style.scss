@@ -1,3 +1,39 @@
-h1{
-    color: aqua
+@import url(./reset.css);
+
+$brand-color: rgb(241,212,196);
+$brown-color:#463232;
+
+@mixin  inline-flex{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+} 
+
+header{
+    
+    @include inline-flex();
+    background-color: $brand-color;  
+    min-width: 100vw;
+    padding: 2.5rem 5rem;
+    ul{
+        @include inline-flex();  
+        list-style-type: none;
+    }
+    li{
+        color: $brown-color;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    #brand{
+    color: $brown-color;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Raleway';
+    }
+    #menu{
+        color: $brown-color;
+        font-size: 1.6rem;
+    }
+
 }
