@@ -18,11 +18,10 @@ header {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  min-width: 100vw;
-  overflow-x: hidden;
   padding: 2.5rem 5rem 2.5rem 5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#f1d7c8), color-stop(#efd2c2), to(#f1d7c8));
-  background: linear-gradient(0.25turn, #f1d7c8, #efd2c2, #f1d7c8);
+  background: -webkit-gradient(linear, left top, right top, from(#f1d7c8), color-stop(#efd2c2), to(#f6d6c4));
+  background: linear-gradient(0.25turn, #f1d7c8, #efd2c2, #f6d6c4);
+  width: 100%;
 }
 
 header ul {
@@ -62,7 +61,7 @@ header #menu {
   max-width: 100vw;
   background: url(../images/products/p1.jpg) no-repeat center;
   background-size: cover;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
 }
 
 #intro h1 {
@@ -129,5 +128,89 @@ header #menu {
 
 #intro .search-box #search-button :hover {
   cursor: pointer;
+}
+
+#lenders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fef6f0;
+  padding: 4rem;
+}
+
+#lenders h2 {
+  color: #463232;
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+#lenders .lendors-logo {
+  max-width: 80vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5rem;
+}
+
+#lenders .lendors-logo .span-size, #lenders .lendors-logo #chase, #lenders .lendors-logo #asana, #lenders .lendors-logo #google, #lenders .lendors-logo #buzz, #lenders .lendors-logo #toggle, #lenders .lendors-logo #walmart {
+  width: 10.5rem;
+  height: 2.5rem;
+}
+
+#lenders .lendors-logo #chase {
+  background: url(../images/brands/chasesm.png);
+  background-size: cover;
+}
+
+#lenders .lendors-logo #asana {
+  background: url(../images/brands/asanasm.png) right;
+  background-size: cover;
+}
+
+#lenders .lendors-logo #google {
+  background: url(../images/brands/googlesm.png) center;
+  background-size: cover;
+  height: 3.5rem;
+}
+
+#lenders .lendors-logo #buzz {
+  background: url(../images/brands/buzzfeedsm.png) center;
+  background-size: cover;
+  width: 14rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#lenders .lendors-logo #toggle {
+  background: url(../images/brands/Togglesm.png) center;
+  background-size: cover;
+  height: 3rem;
+}
+
+#lenders .lendors-logo #walmart {
+  background: url(../images/brands/walmartsm.png) left;
+  background-size: cover;
+  width: 13.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
