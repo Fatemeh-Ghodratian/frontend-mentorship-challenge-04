@@ -1,5 +1,5 @@
 @import url(./reset.css);
-.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #aboutUs div .btn:hover, #aboutUs div .outline-btn, #aboutUs div .outline-btn:hover {
+.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #products div .btn, #aboutUs div .btn:hover, #products div .btn:hover, #aboutUs div .outline-btn, #products div .outline-btn, #aboutUs div .outline-btn:hover, #products div .outline-btn:hover {
   width: 18rem;
   height: 5rem;
   -webkit-box-shadow: #000 0.1rem 0.1rem 0.5rem;
@@ -7,9 +7,9 @@
   font-weight: 400;
 }
 
-.img-size, #aboutUs div #about-us-img1, #aboutUs div #about-us-img2 {
+.img-size, #aboutUs div img, #products div img {
   width: 52rem;
-  height: 53rem;
+  height: 55rem;
 }
 
 section {
@@ -235,7 +235,7 @@ header #menu {
   margin-bottom: 1rem;
 }
 
-#aboutUs {
+#aboutUs, #products {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -256,7 +256,7 @@ header #menu {
   gap: 10rem;
 }
 
-#aboutUs div {
+#aboutUs div, #products div {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -276,43 +276,142 @@ header #menu {
   width: 38vw;
 }
 
-#aboutUs div h2 {
-  color: #463232;
-  font-size: 7rem;
-  font-weight: 400;
-  letter-spacing: -0.6rem;
-  margin: 4rem 0 0 0;
-}
-
-#aboutUs div p {
-  width: 30vw;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: gray;
-}
-
-#aboutUs div .btn {
+#aboutUs div .btn, #products div .btn {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
   margin-bottom: 4rem;
 }
 
-#aboutUs div .btn:hover {
-  background-color: rgba(243, 243, 243, 0.993);
+#aboutUs div .btn:hover, #products div .btn:hover {
+  background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
 }
 
-#aboutUs div .outline-btn {
-  background-color: rgba(243, 243, 243, 0.993);
+#aboutUs div .outline-btn, #products div .outline-btn {
+  background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
 }
 
-#aboutUs div .outline-btn:hover {
+#aboutUs div .outline-btn:hover, #products div .outline-btn:hover {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
+}
+
+#aboutUs h2, #products h2 {
+  color: #463232;
+  font-size: 7rem;
+  font-weight: 400;
+  margin: 4rem 0 0 0;
+}
+
+#aboutUs p, #products p {
+  width: 30vw;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: gray;
+}
+
+#products {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6rem;
+}
+
+#products #products-img-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
+}
+
+#products div {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0;
+}
+
+#products div #products-img-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
+}
+
+#products div h3 {
+  color: #463232;
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 2rem 0 0 0;
+}
+
+#products div button {
+  margin-top: 3rem;
+}
+
+#products div .btn-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30vw;
+}
+
+#products div .analytic-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 10vw;
+  margin: 2rem 0 2rem 0;
+  gap: 2rem;
+}
+
+#products div .analytic-span span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#products div .analytic-span p {
+  width: 10vw;
+  margin-top: 1rem;
+}
+
+#products div .analytic {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #00557d;
+  border-bottom: #463232 solid 3px;
+}
+
+#products #discribe {
+  width: 50vw;
+  text-align: center;
+}
+
+#products h2 {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

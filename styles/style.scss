@@ -6,6 +6,7 @@ $brand-color1:rgb(241,215,200);
 $brand-color2:rgb(239,210,194);
 $brand-color3:rgb(246,214,196);
 $light-pink:rgb(254,246,240);
+$analytic-blue:rgb(0,85,125);
 
 @mixin  inline-flex{
     display:inline-flex;
@@ -21,7 +22,7 @@ $light-pink:rgb(254,246,240);
     @extend .btn-size;  
 }
 @mixin  outline-btn {
-    background-color:$white-color;
+    background-color:white;
     color:$brown-color ;
     border:0.1rem solid $brown-color;
     @extend .btn-size;
@@ -34,7 +35,7 @@ $light-pink:rgb(254,246,240);
 }
 .img-size{
     width: 52rem;
-    height: 53rem;
+    height: 55rem;
 }
 section{
     max-width:100vw;
@@ -201,20 +202,6 @@ header{
         flex-direction: column;
         align-items: flex-start;
         width: 38vw;
-        h2{
-            color: $brown-color;
-            font-size: 7rem;
-            font-weight: 400;
-            letter-spacing:-0.6rem;
-            margin: 4rem 0 0 0;
-        }
-        p{
-            width: 30vw;
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: gray
-        }
-        
         .btn{
             @include btn();
             margin-bottom: 4rem;
@@ -228,12 +215,87 @@ header{
         .outline-btn:hover{
             @include btn()
         }
-        #about-us-img1 {
+        img{
             @extend .img-size;
         }
-        #about-us-img2{
-            @extend .img-size; 
+    }
+     h2{
+            color: $brown-color;
+            font-size: 7rem;
+            font-weight: 400;
+            margin: 4rem 0 0 0;
         }
+        p{
+            width: 30vw;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: gray
+        }
+    
+}
+//start products section
+#products{
+    @extend #aboutUs;
+    flex-direction: column;
+    gap:6rem;
+    #products-img-span{
+        display: flex;
+        gap: 10rem;
+    }
+    div{
+        justify-content: flex-start;
+        gap:0;
+        
+        #products-img-span {
+            display: flex;
+            gap:10rem;
+        }
+        h3{
+            color: $brown-color;
+            font-size: 5rem;
+            font-weight: 400;
+            margin: 2rem 0 0 0;
+        }
+        button{
+            margin-top: 3rem;
+        }
+        .btn-span{
+            display: flex;
+            justify-content: space-between;
+            width: 30vw;
+        }
+        .analytic-span {
+            display: flex;
+            flex-direction: row;
+            width:10vw;
+            margin:2rem 0 2rem 0;
+            gap:2rem
+            
+        }
+        .analytic-span span{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .analytic-span p{
+            width:10vw;
+            margin-top: 1rem;
+        }
+        
+        .analytic{
+            width: fit-content;
+            font-size: 3rem;
+            font-weight: 500;
+            color: $analytic-blue;
+            border-bottom: $brown-color solid 3px;
+        }
+    }
+    #discribe{
+        width: 50vw;
+        text-align: center;  
+    }
+    h2{
+        text-align: center;
     }
     
 }
