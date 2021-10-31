@@ -9,7 +9,7 @@
 
 .img-size, #aboutUs div #about-us-img1, #aboutUs div #about-us-img2 {
   width: 52rem;
-  height: 50rem;
+  height: 53rem;
 }
 
 section {
@@ -285,7 +285,7 @@ header #menu {
 }
 
 #aboutUs div p {
-  width: 40vw;
+  width: 30vw;
   font-size: 1.4rem;
   font-weight: 400;
   color: gray;
@@ -295,6 +295,7 @@ header #menu {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
+  margin-bottom: 4rem;
 }
 
 #aboutUs div .btn:hover {

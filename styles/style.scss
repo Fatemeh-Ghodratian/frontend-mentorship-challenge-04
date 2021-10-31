@@ -34,7 +34,7 @@ $light-pink:rgb(254,246,240);
 }
 .img-size{
     width: 52rem;
-    height: 50rem;
+    height: 53rem;
 }
 section{
     max-width:100vw;
@@ -209,7 +209,7 @@ header{
             margin: 4rem 0 0 0;
         }
         p{
-            width: 40vw;
+            width: 30vw;
             font-size: 1.4rem;
             font-weight: 400;
             color: gray
@@ -217,6 +217,7 @@ header{
         
         .btn{
             @include btn();
+            margin-bottom: 4rem;
         }
         .btn:hover{
             @include outline-btn();
