@@ -1,5 +1,5 @@
 @import url(./reset.css);
-.btn-size, #intro .btn, #intro .btn:hover {
+.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #aboutUs div .btn:hover, #aboutUs div .outline-btn, #aboutUs div .outline-btn:hover {
   width: 18rem;
   height: 5rem;
   -webkit-box-shadow: #000 0.1rem 0.1rem 0.5rem;
@@ -7,13 +7,21 @@
   font-weight: 400;
 }
 
+.img-size, #aboutUs div #about-us-img1, #aboutUs div #about-us-img2 {
+  width: 52rem;
+  height: 50rem;
+}
+
+section {
+  max-width: 100vw;
+}
+
 header {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -21,16 +29,14 @@ header {
   padding: 2.5rem 5rem 2.5rem 5rem;
   background: -webkit-gradient(linear, left top, right top, from(#f1d7c8), color-stop(#efd2c2), to(#f6d6c4));
   background: linear-gradient(0.25turn, #f1d7c8, #efd2c2, #f6d6c4);
-  width: 100%;
 }
 
 header ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -45,6 +51,15 @@ header li {
 }
 
 header #brand {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
   color: #463232;
   font-size: 2.5rem;
   font-weight: bold;
@@ -52,13 +67,20 @@ header #brand {
 }
 
 header #menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
   color: #463232;
   font-size: 1.6rem;
 }
 
 #intro {
-  min-height: 100vh;
-  max-width: 100vw;
   background: url(../images/products/p1.jpg) no-repeat center;
   background-size: cover;
   padding-bottom: 4rem;
@@ -87,13 +109,13 @@ header #menu {
 }
 
 #intro .btn:hover {
-  background-color: rgba(243, 243, 243, 0.993);
-  color: #463232;
-  border: 0.1rem solid #463232;
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
 }
 
 #intro .search-box {
-  width: 20vw;
+  width: 20rem;
   max-height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,9 +163,9 @@ header #menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #fef6f0;
   padding: 4rem;
 }
@@ -156,7 +178,6 @@ header #menu {
 }
 
 #lenders .lendors-logo {
-  max-width: 80vw;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -212,5 +233,85 @@ header #menu {
   width: 13.5rem;
   height: 3.5rem;
   margin-bottom: 1rem;
+}
+
+#aboutUs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2rem 0 2rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10rem;
+}
+
+#aboutUs div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 38vw;
+}
+
+#aboutUs div h2 {
+  color: #463232;
+  font-size: 7rem;
+  font-weight: 400;
+  letter-spacing: -0.6rem;
+  margin: 4rem 0 0 0;
+}
+
+#aboutUs div p {
+  width: 40vw;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: gray;
+}
+
+#aboutUs div .btn {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
+}
+
+#aboutUs div .btn:hover {
+  background-color: rgba(243, 243, 243, 0.993);
+  color: #463232;
+  border: 0.1rem solid #463232;
+}
+
+#aboutUs div .outline-btn {
+  background-color: rgba(243, 243, 243, 0.993);
+  color: #463232;
+  border: 0.1rem solid #463232;
+}
+
+#aboutUs div .outline-btn:hover {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
