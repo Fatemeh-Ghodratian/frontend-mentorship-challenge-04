@@ -115,8 +115,7 @@ header #menu {
 }
 
 #intro .search-box {
-  width: 20rem;
-  max-height: 4rem;
+  width: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,14 +125,13 @@ header #menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.5rem 1.2rem;
+  padding: 1rem 1rem;
   margin: 4rem 8rem;
   background: rgba(243, 243, 243, 0.993);
 }
 
 #intro .search-box input {
   background: rgba(243, 243, 243, 0.993);
-  width: 80%;
   padding: 0.8rem 0.8rem;
   border: 0;
   outline: none;
@@ -373,7 +371,7 @@ header #menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 10vw;
+  width: 20vw;
   margin: 2rem 0 2rem 0;
   gap: 2rem;
 }
@@ -413,5 +411,63 @@ header #menu {
 
 #products h2 {
   text-align: center;
+}
+
+#analytics {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background-color: rgba(254, 246, 240, 0.3);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  gap: 0;
+}
+
+#analytics span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 38rem;
+  height: 10rem;
+  gap: 0;
+}
+
+#analytics .analytics-title {
+  color: #463232;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+#analytics .analytics-describe {
+  color: gray;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#analytics .right-border {
+  border-right: #463232 solid 3px;
+}
+
+#analytics .left-border {
+  border-left: #463232 solid 3px;
 }
 /*# sourceMappingURL=style.css.map */

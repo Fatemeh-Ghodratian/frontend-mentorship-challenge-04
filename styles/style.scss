@@ -6,6 +6,7 @@ $brand-color1:rgb(241,215,200);
 $brand-color2:rgb(239,210,194);
 $brand-color3:rgb(246,214,196);
 $light-pink:rgb(254,246,240);
+$lighter-pink:rgba(254,246,240,0.3);
 $analytic-blue:rgb(0,85,125);
 
 @mixin  inline-flex{
@@ -73,7 +74,6 @@ header{
     background: url(../images/products/p1.jpg) no-repeat center;
     background-size: cover;
     padding-bottom: 4rem ;
-
     h1{
         color: $brown-color;
         font-family: 'open sans';
@@ -95,18 +95,16 @@ header{
         @include btn();
     }
     .search-box{
-        width: 20rem;
-        max-height: 4rem;
+        width: 25rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2.5rem 1.2rem;
+        padding: 1rem 1rem;
         margin:4rem 8rem;
         background: $white-color;
 
         input{
             background: $white-color;
-            width: 80%;
             padding: 0.8rem 0.8rem;
             border: 0;
             outline: none;
@@ -267,7 +265,7 @@ header{
         .analytic-span {
             display: flex;
             flex-direction: row;
-            width:10vw;
+            width:20vw;
             margin:2rem 0 2rem 0;
             gap:2rem
             
@@ -297,5 +295,36 @@ header{
     h2{
         text-align: center;
     }
-    
+}
+//start analytics section
+#analytics{
+    @include inline-flex();
+    background-color: $lighter-pink;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    gap:0;
+    span{
+        @include inline-flex();
+        flex-direction: column;
+        width: 38rem;
+        height:10rem;
+        gap:0;
+    }
+    .analytics-title{
+        color: $brown-color;
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+    .analytics-describe{
+        color: gray;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .right-border{
+        border-right: $brown-color solid 3px;
+    }
+    .left-border{
+        border-left: $brown-color solid 3px;
+    }
 }
