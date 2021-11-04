@@ -1,5 +1,5 @@
 @import url(./reset.css);
-.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #products div .btn, #aboutUs div .btn:hover, #products div .btn:hover, #aboutUs div .outline-btn, #products div .outline-btn, #aboutUs div .outline-btn:hover, #products div .outline-btn:hover {
+.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #products div .btn, #aboutUs div .btn:hover, #products div .btn:hover, #aboutUs div .outline-btn, #products div .outline-btn, #aboutUs div .outline-btn:hover, #products div .outline-btn:hover, #another-product .btn, #another-product .btn:hover {
   width: 18rem;
   height: 5rem;
   -webkit-box-shadow: #000 0.1rem 0.1rem 0.5rem;
@@ -14,6 +14,13 @@
 
 section {
   max-width: 100vw;
+}
+
+h3 {
+  color: #463232;
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 2rem 0 0 0;
 }
 
 header {
@@ -109,9 +116,9 @@ header #menu {
 }
 
 #intro .btn:hover {
-  background-color: #463232;
-  color: rgba(243, 243, 243, 0.993);
-  border: none;
+  background-color: white;
+  color: #463232;
+  border: 0.1rem solid #463232;
 }
 
 #intro .search-box {
@@ -342,13 +349,6 @@ header #menu {
   gap: 10rem;
 }
 
-#products div h3 {
-  color: #463232;
-  font-size: 5rem;
-  font-weight: 400;
-  margin: 2rem 0 0 0;
-}
-
 #products div button {
   margin-top: 3rem;
 }
@@ -469,5 +469,86 @@ header #menu {
 
 #analytics .left-border {
   border-left: #463232 solid 3px;
+}
+
+#another-product {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 8rem 2rem 8rem 2rem;
+  gap: 6rem;
+}
+
+#another-product .section-parts {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  width: 47rem;
+  height: 50rem;
+  gap: 0;
+}
+
+#another-product #describe-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#another-product #behind-span {
+  min-width: 47rem;
+  min-height: 50rem;
+  background-color: #f1d7c8;
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+
+#another-product #infront-img {
+  width: 47rem;
+  height: 50rem;
+  margin-left: -44rem;
+}
+
+#another-product p {
+  width: 30vw;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: gray;
+}
+
+#another-product .btn {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
+}
+
+#another-product .btn:hover {
+  background-color: white;
+  color: #463232;
+  border: 0.1rem solid #463232;
 }
 /*# sourceMappingURL=style.css.map */

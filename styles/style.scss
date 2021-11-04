@@ -28,6 +28,12 @@ $analytic-blue:rgb(0,85,125);
     border:0.1rem solid $brown-color;
     @extend .btn-size;
 }
+@mixin  paragraph {
+    width: 30vw;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: gray
+}
 .btn-size{
     width: 18rem;
     height: 5rem;
@@ -40,6 +46,12 @@ $analytic-blue:rgb(0,85,125);
 }
 section{
     max-width:100vw;
+}
+h3{
+    color: $brown-color;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 2rem 0 0 0;
 }
 //header
 header{
@@ -92,7 +104,7 @@ header{
         margin: 4rem 8rem;
     }
     .btn:hover{
-        @include btn();
+        @include outline-btn();
     }
     .search-box{
         width: 25rem;
@@ -217,18 +229,15 @@ header{
             @extend .img-size;
         }
     }
-     h2{
+    h2{
             color: $brown-color;
             font-size: 7rem;
             font-weight: 400;
             margin: 4rem 0 0 0;
-        }
-        p{
-            width: 30vw;
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: gray
-        }
+    }
+    p{
+       @include paragraph()  
+    }
     
 }
 //start products section
@@ -248,12 +257,7 @@ header{
             display: flex;
             gap:10rem;
         }
-        h3{
-            color: $brown-color;
-            font-size: 5rem;
-            font-weight: 400;
-            margin: 2rem 0 0 0;
-        }
+       
         button{
             margin-top: 3rem;
         }
@@ -326,5 +330,43 @@ header{
     }
     .left-border{
         border-left: $brown-color solid 3px;
+    }
+}
+//start the last part of product
+#another-product{
+    @include inline-flex();
+    padding: 8rem 2rem 8rem 2rem;
+    gap:6rem;
+    .section-parts{
+        @include inline-flex();
+        width: 47rem;
+        height:50rem;
+        gap:0;
+    }
+    #describe-span{
+        @include inline-flex();
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    #behind-span{
+        min-width: 47rem;
+        min-height: 50rem;
+        background-color: $brand-color1;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+    #infront-img{
+        width: 47rem;
+        height: 50rem;
+        margin-left: -44rem;
+    }
+    p{
+        @include paragraph()  
+     }
+    .btn{
+        @include btn(); 
+    }
+    .btn:hover{
+        @include outline-btn();
     }
 }
