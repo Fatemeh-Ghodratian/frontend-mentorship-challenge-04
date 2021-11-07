@@ -1,13 +1,15 @@
 @import url(./reset.css);
 
 $brown-color:#463232;
-$white-color: rgba(243, 243, 243, 0.993);
+$light-gray-color: rgba(243, 243, 243, 0.993);
+$white-color:rgb(255, 255, 255);
 $brand-color1:rgb(241,215,200);
 $brand-color2:rgb(239,210,194);
 $brand-color3:rgb(246,214,196);
 $light-pink:rgb(254,246,240);
 $lighter-pink:rgba(254,246,240,0.3);
 $analytic-blue:rgb(0,85,125);
+$stars-color:rgb(253,138,118);
 
 @mixin  inline-flex{
     display:inline-flex;
@@ -18,7 +20,7 @@ $analytic-blue:rgb(0,85,125);
 
 @mixin btn {
     background-color: $brown-color;
-    color:$white-color ;
+    color:$light-gray-color ;
     border: none;   
     @extend .btn-size;  
 }
@@ -29,8 +31,8 @@ $analytic-blue:rgb(0,85,125);
     @extend .btn-size;
 }
 @mixin  paragraph {
-    width: 30vw;
-    font-size: 1.4rem;
+    width: 33vw;
+    font-size: 1.7rem;
     font-weight: 400;
     color: gray
 }
@@ -52,6 +54,13 @@ h3{
     font-size: 5rem;
     font-weight: 400;
     margin: 2rem 0 0 0;
+}
+.discribe{
+    width: 50vw;
+    text-align: center;  
+}
+h2{
+    text-align: center;
 }
 //header
 header{
@@ -94,8 +103,8 @@ header{
         text-align: center;
     }
     p{
-        max-width: 27vw;
-        font-size: 1.4rem;
+        max-width: 25vw;
+        font-size: 1.7rem;
         font-weight: 500;
         margin: 8rem 0rem 0 8rem;
     }
@@ -113,10 +122,10 @@ header{
         align-items: center;
         padding: 1rem 1rem;
         margin:4rem 8rem;
-        background: $white-color;
+        background: $light-gray-color;
 
         input{
-            background: $white-color;
+            background: $light-gray-color;
             padding: 0.8rem 0.8rem;
             border: 0;
             outline: none;
@@ -125,7 +134,7 @@ header{
         #search-button{
             background: $brown-color;
             padding: 0.8rem 0.9rem 0.8rem 0.9rem;
-            color: $white-color;
+            color: $light-gray-color;
             font-size: 1.5rem;
             border: none;
 
@@ -278,6 +287,9 @@ header{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            p{
+                font-size: 1.4rem;
+            } 
         }
         .analytic-span p{
             width:10vw;
@@ -292,13 +304,7 @@ header{
             border-bottom: $brown-color solid 3px;
         }
     }
-    #discribe{
-        width: 50vw;
-        text-align: center;  
-    }
-    h2{
-        text-align: center;
-    }
+    
 }
 //start analytics section
 #analytics{
@@ -369,4 +375,78 @@ header{
     .btn:hover{
         @include outline-btn();
     }
+}
+//start the last part of product
+#customers{
+    @include inline-flex();
+    @extend #aboutUs;
+    flex-direction: column;
+    gap:6rem;
+    background-color: $light-pink;
+    padding-bottom: 10rem;
+    #customer-cards{
+        display: flex;
+        gap:3rem
+    }
+    #title-span{
+        @include inline-flex();
+        flex-direction: column;
+    }
+    #arrows{
+        @include inline-flex();
+        justify-content: flex-end;
+        align-items: center;
+        width: 95rem;
+    }
+    h2{
+        width: 80rem;
+    }
+    .arrows-span{
+        min-width: 4rem;
+        min-height: 4rem;
+        border: $brown-color solid 1px;
+        border-radius: 100%;
+        color: $brown-color;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .arrows-span:hover{
+        background-color: $brown-color;
+        color: $light-gray-color;
+    }
+    div{
+        width: 32rem;
+        height: 33rem;
+        padding: 3rem;
+        background-color: $white-color;
+    }
+    div:hover{
+        box-shadow:  0 0 30px $light-gray-color;
+    }
+    .stars {
+        color: $stars-color;
+        font-size: 1.2rem;
+    }
+    .customer-oponion{
+        width: 27rem;
+    }
+    .customer-info{
+        @include inline-flex()
+    }
+    .customer-img{
+        width: 5rem;
+        height: 5rem; 
+        border-radius: 100%;
+    }
+    .customer-name{
+        color: $brown-color;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .customer-role{
+        font-size: 1.3rem;
+    }
+   
 }

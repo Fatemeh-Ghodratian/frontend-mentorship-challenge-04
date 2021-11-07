@@ -1,5 +1,5 @@
 @import url(./reset.css);
-.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #products div .btn, #aboutUs div .btn:hover, #products div .btn:hover, #aboutUs div .outline-btn, #products div .outline-btn, #aboutUs div .outline-btn:hover, #products div .outline-btn:hover, #another-product .btn, #another-product .btn:hover {
+.btn-size, #intro .btn, #intro .btn:hover, #aboutUs div .btn, #products div .btn, #customers div .btn, #aboutUs div .btn:hover, #products div .btn:hover, #customers div .btn:hover, #aboutUs div .outline-btn, #products div .outline-btn, #customers div .outline-btn, #aboutUs div .outline-btn:hover, #products div .outline-btn:hover, #customers div .outline-btn:hover, #another-product .btn, #another-product .btn:hover {
   width: 18rem;
   height: 5rem;
   -webkit-box-shadow: #000 0.1rem 0.1rem 0.5rem;
@@ -7,7 +7,7 @@
   font-weight: 400;
 }
 
-.img-size, #aboutUs div img, #products div img {
+.img-size, #aboutUs div img, #products div img, #customers div img {
   width: 52rem;
   height: 55rem;
 }
@@ -21,6 +21,15 @@ h3 {
   font-size: 5rem;
   font-weight: 400;
   margin: 2rem 0 0 0;
+}
+
+.discribe {
+  width: 50vw;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
 }
 
 header {
@@ -102,8 +111,8 @@ header #menu {
 }
 
 #intro p {
-  max-width: 27vw;
-  font-size: 1.4rem;
+  max-width: 25vw;
+  font-size: 1.7rem;
   font-weight: 500;
   margin: 8rem 0rem 0 8rem;
 }
@@ -240,7 +249,7 @@ header #menu {
   margin-bottom: 1rem;
 }
 
-#aboutUs, #products {
+#aboutUs, #products, #customers {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -261,7 +270,7 @@ header #menu {
   gap: 10rem;
 }
 
-#aboutUs div, #products div {
+#aboutUs div, #products div, #customers div {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -281,41 +290,41 @@ header #menu {
   width: 38vw;
 }
 
-#aboutUs div .btn, #products div .btn {
+#aboutUs div .btn, #products div .btn, #customers div .btn {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
   margin-bottom: 4rem;
 }
 
-#aboutUs div .btn:hover, #products div .btn:hover {
+#aboutUs div .btn:hover, #products div .btn:hover, #customers div .btn:hover {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
 }
 
-#aboutUs div .outline-btn, #products div .outline-btn {
+#aboutUs div .outline-btn, #products div .outline-btn, #customers div .outline-btn {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
 }
 
-#aboutUs div .outline-btn:hover, #products div .outline-btn:hover {
+#aboutUs div .outline-btn:hover, #products div .outline-btn:hover, #customers div .outline-btn:hover {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
 }
 
-#aboutUs h2, #products h2 {
+#aboutUs h2, #products h2, #customers h2 {
   color: #463232;
   font-size: 7rem;
   font-weight: 400;
   margin: 4rem 0 0 0;
 }
 
-#aboutUs p, #products p {
-  width: 30vw;
-  font-size: 1.4rem;
+#aboutUs p, #products p, #customers p {
+  width: 33vw;
+  font-size: 1.7rem;
   font-weight: 400;
   color: gray;
 }
@@ -389,6 +398,10 @@ header #menu {
           justify-content: center;
 }
 
+#products div .analytic-span span p {
+  font-size: 1.4rem;
+}
+
 #products div .analytic-span p {
   width: 10vw;
   margin-top: 1rem;
@@ -402,15 +415,6 @@ header #menu {
   font-weight: 500;
   color: #00557d;
   border-bottom: #463232 solid 3px;
-}
-
-#products #discribe {
-  width: 50vw;
-  text-align: center;
-}
-
-#products h2 {
-  text-align: center;
 }
 
 #analytics {
@@ -534,8 +538,8 @@ header #menu {
 }
 
 #another-product p {
-  width: 30vw;
-  font-size: 1.4rem;
+  width: 33vw;
+  font-size: 1.7rem;
   font-weight: 400;
   color: gray;
 }
@@ -550,5 +554,140 @@ header #menu {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
+}
+
+#customers {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6rem;
+  background-color: #fef6f0;
+  padding-bottom: 10rem;
+}
+
+#customers #customer-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+#customers #title-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#customers #arrows {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  align-items: center;
+  width: 95rem;
+}
+
+#customers h2 {
+  width: 80rem;
+}
+
+#customers .arrows-span {
+  min-width: 4rem;
+  min-height: 4rem;
+  border: #463232 solid 1px;
+  border-radius: 100%;
+  color: #463232;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#customers .arrows-span:hover {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+}
+
+#customers div {
+  width: 32rem;
+  height: 33rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+#customers div:hover {
+  -webkit-box-shadow: 0 0 30px rgba(243, 243, 243, 0.993);
+          box-shadow: 0 0 30px rgba(243, 243, 243, 0.993);
+}
+
+#customers .stars {
+  color: #fd8a76;
+  font-size: 1.2rem;
+}
+
+#customers .customer-oponion {
+  width: 27rem;
+}
+
+#customers .customer-info {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+#customers .customer-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+
+#customers .customer-name {
+  color: #463232;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#customers .customer-role {
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=style.css.map */
