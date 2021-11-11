@@ -450,3 +450,76 @@ header{
     }
    
 }
+//start footer 
+footer{
+    @include inline-flex();
+    flex-direction: column;
+    #footer-menus, #footer-menus-span{
+        
+        @include inline-flex();  
+        gap: 10rem;
+        align-items: flex-start;
+        #footer-brand{
+            color: $brown-color;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Raleway';
+            margin-bottom: 2rem;
+        }
+        p{
+            @include paragraph();
+        }
+        h5{
+            @extend #footer-brand;
+            font-family: 'Poppins', sans-serif;
+            font-weight: lighter;
+        }
+        ul{
+            list-style-type: none;
+            li{
+                margin-bottom: 1rem;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+            font-size: 1.5rem;
+            
+        }
+    }
+    #footer-menus{
+        padding-top: 10rem;
+    }
+    #footer-socials-span{
+        @include inline-flex();
+        justify-content: flex-start;
+        width: 80vw;
+        padding-bottom: 3rem;
+        border-bottom: $light-gray-color solid 2px;
+    }
+    .footer-socials{
+        min-width: 4rem;
+        min-height: 4rem;
+        border: $brown-color solid 1px;
+        border-radius: 100%;
+        color: $light-gray-color;
+        background-color: $brown-color;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-socials:hover{
+        background-color: $light-gray-color;
+        color: $brown-color;
+    }
+    #copy-right-span{
+        @include inline-flex();
+        padding-bottom: 2rem;
+        text-align: center;
+        p{
+            @include paragraph()
+        }
+    }
+
+}

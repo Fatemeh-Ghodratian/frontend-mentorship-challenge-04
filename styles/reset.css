@@ -11,13 +11,14 @@
         font-family: 'Poppins', sans-serif; 
         scroll-behavior: smooth;
         font-size: 62.5%;
+        overflow-x: hidden;
     }
     body{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center; 
-         overflow-x: hidden;
+        overflow-x: hidden;
     }
     body section, body header{
         width: 100vw;

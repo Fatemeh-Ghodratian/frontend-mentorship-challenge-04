@@ -690,4 +690,137 @@ header #menu {
 #customers .customer-role {
   font-size: 1.3rem;
 }
+
+footer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer #footer-menus, footer #footer-menus-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  gap: 10rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer #footer-menus #footer-brand, footer #footer-menus h5, footer #footer-menus #footer-menus-span h5, footer #footer-menus-span #footer-menus h5, footer #footer-menus-span #footer-brand, footer #footer-menus-span #footer-menus h5, footer #footer-menus #footer-menus-span h5, footer #footer-menus-span h5 {
+  color: #463232;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Raleway';
+  margin-bottom: 2rem;
+}
+
+footer #footer-menus p, footer #footer-menus-span p {
+  width: 33vw;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: gray;
+}
+
+footer #footer-menus h5, footer #footer-menus-span h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+footer #footer-menus ul, footer #footer-menus-span ul {
+  list-style-type: none;
+}
+
+footer #footer-menus ul li, footer #footer-menus-span ul li {
+  margin-bottom: 1rem;
+}
+
+footer #footer-menus a, footer #footer-menus-span a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+footer #footer-menus {
+  padding-top: 10rem;
+}
+
+footer #footer-socials-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 80vw;
+  padding-bottom: 3rem;
+  border-bottom: rgba(243, 243, 243, 0.993) solid 2px;
+}
+
+footer .footer-socials {
+  min-width: 4rem;
+  min-height: 4rem;
+  border: #463232 solid 1px;
+  border-radius: 100%;
+  color: rgba(243, 243, 243, 0.993);
+  background-color: #463232;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-socials:hover {
+  background-color: rgba(243, 243, 243, 0.993);
+  color: #463232;
+}
+
+footer #copy-right-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+footer #copy-right-span p {
+  width: 33vw;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: gray;
+}
 /*# sourceMappingURL=style.css.map */
