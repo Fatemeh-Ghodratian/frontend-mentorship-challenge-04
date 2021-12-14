@@ -35,12 +35,14 @@ $stars-color:rgb(253,138,118);
     color:$light-gray-color ;
     border: none;   
     @extend .btn-size;  
+    transition: all 200ms ease-in-out;
 }
 @mixin  outline-btn {
     background-color:white;
     color:$brown-color ;
     border:0.1rem solid $brown-color;
     @extend .btn-size;
+    transition: all 200ms ease-in-out;
 }
 @mixin  paragraph {
     width: 33vw;
@@ -537,5 +539,5 @@ footer{
             @include paragraph()
         }
     }
-
 }
+
