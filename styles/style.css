@@ -121,6 +121,8 @@ header #menu {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   margin: 4rem 8rem;
 }
 
@@ -128,6 +130,8 @@ header #menu {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #intro .search-box {
@@ -295,6 +299,8 @@ header #menu {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   margin-bottom: 4rem;
 }
 
@@ -302,18 +308,24 @@ header #menu {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #aboutUs div .outline-btn, #products div .outline-btn, #customers div .outline-btn {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #aboutUs div .outline-btn:hover, #products div .outline-btn:hover, #customers div .outline-btn:hover {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #aboutUs h2, #products h2, #customers h2 {
@@ -373,6 +385,10 @@ header #menu {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+#products div #product-title-h2, #products div #product-title-describe {
+  margin: 0 auto;
 }
 
 #products div #products-img-span {
@@ -581,12 +597,16 @@ header #menu {
   background-color: #463232;
   color: rgba(243, 243, 243, 0.993);
   border: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #another-product .btn:hover {
   background-color: white;
   color: #463232;
   border: 0.1rem solid #463232;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #customers {
