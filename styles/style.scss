@@ -1,556 +1,596 @@
 @import url(./reset.css);
-
-$brown-color:#463232;
-$light-gray-color: rgba(243, 243, 243, 0.993);
-$white-color:rgb(255, 255, 255);
-$brand-color1:rgb(241,215,200);
-$brand-color2:rgb(239,210,194);
-$brand-color3:rgb(246,214,196);
-$light-pink:rgb(254,246,240);
-$lighter-pink:rgba(254,246,240,0.3);
-$analytic-blue:rgb(0,85,125);
-$stars-color:rgb(253,138,118);
-
-@mixin  inline-flex{
-    display:inline-flex;
-    justify-content: space-around;
-    align-items:center;
-    gap: 2rem;
-} 
-@mixin flex-column {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-    gap: 2rem;   
-}
-@mixin  flex-center {
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.btn-size, #another-product .btn:hover, #another-product .btn, #aboutUs div .outline-btn:hover, #customers div .outline-btn:hover, #products div .outline-btn:hover, #aboutUs div .outline-btn, #customers div .outline-btn, #products div .outline-btn, #aboutUs div .btn:hover, #customers div .btn:hover, #products div .btn:hover, #aboutUs div .btn, #customers div .btn, #products div .btn, #intro .btn:hover, #intro .btn {
+  width: 18rem;
+  height: 5rem;
+  box-shadow: #000 0.1rem 0.1rem 0.5rem;
+  font-weight: 400;
 }
 
-@mixin btn {
-    background-color: $brown-color;
-    color:$light-gray-color ;
-    border: none;   
-    @extend .btn-size;  
-    transition: all 200ms ease-in-out;
-}
-@mixin  outline-btn {
-    background-color:white;
-    color:$brown-color ;
-    border:0.1rem solid $brown-color;
-    @extend .btn-size;
-    transition: all 200ms ease-in-out;
-}
-@mixin  paragraph {
-    width: 33vw;
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: gray
-}
-.btn-size{
-    width: 18rem;
-    height: 5rem;
-    box-shadow:#000 0.1rem 0.1rem 0.5rem;
-    font-weight: 400;
-}
-.img-size{
-    width: 52rem;
-    height: 55rem;
-}
-section{
-    max-width:100vw;
-}
-h3{
-    color: $brown-color;
-    font-size: 5rem;
-    font-weight: 400;
-    margin: 2rem 0 0 0;
-}
-.discribe{
-    width: 50vw;
-    text-align: center;  
-}
-h2{
-    text-align: center;
-}
-//header
-header{
-    @include inline-flex();
-    padding: 2.5rem 5rem 2.5rem 5rem;
-    background: linear-gradient(0.25turn,$brand-color1, $brand-color2,$brand-color3);
-    ul{
-        @include inline-flex();  
-        list-style-type: none;
-    }
-    li{
-        color: $brown-color;
-        font-size: 1.6rem;
-        font-weight: 500;
-    }
-    #brand{
-        @include inline-flex();
-        color: $brown-color;
-        font-size: 2.5rem;
-        font-weight: bold;
-        font-family: 'Raleway';
-    }
-    #menu{
-        @include inline-flex();
-        color: $brown-color;
-        font-size: 1.6rem;
-    }
-
-}
-//first section with search box
-#intro{
-    background: url(../images/products/p1.jpg) no-repeat center;
-    background-size: cover;
-    padding-bottom: 4rem ;
-    h1{
-        color: $brown-color;
-        font-family: 'open sans';
-        font-size: 8rem;
-        letter-spacing:-0.6rem;
-        text-align: center;
-    }
-    p{
-        max-width: 25vw;
-        font-size: 1.7rem;
-        font-weight: 500;
-        margin: 8rem 0rem 0 8rem;
-    }
-    .btn{
-        @include btn();
-        margin: 4rem 8rem;
-    }
-    .btn:hover{
-        @include outline-btn();
-    }
-    .search-box{
-        width: 25rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1rem;
-        margin:4rem 8rem;
-        background: $light-gray-color;
-
-        input{
-            background: $light-gray-color;
-            padding: 0.8rem 0.8rem;
-            border: 0;
-            outline: none;
-            color: #c1c1c1;
-        }
-        #search-button{
-            background: $brown-color;
-            padding: 0.8rem 0.9rem 0.8rem 0.9rem;
-            color: $light-gray-color;
-            font-size: 1.5rem;
-            border: none;
-
-            :hover{
-                cursor:pointer;
-            }
-        }
-    }
-}
-//lenders section
-#lenders{
-    @include flex-column();
-    align-items: center;
-    justify-content: center;
-    background-color: $light-pink;
-    padding: 4rem;
-    h2{
-        color: $brown-color;
-        font-size: 2.3rem;
-        font-weight: 400;
-        margin-bottom: 4rem;
-    }
-    .lendors-logo{
-        display: inline-flex;
-        flex-wrap: wrap;
-        align-items:center;
-        justify-content: space-between;
-        gap: 5rem;
-        .span-size{
-            width: 10.5rem;
-            height: 2.5rem;
-        }
-        #chase{
-            @extend .span-size;
-            background: url(../images/brands/chasesm.png); 
-            background-size: cover;
-        }
-        #asana{
-            @extend .span-size;
-            background: url(../images/brands/asanasm.png) right; 
-            background-size: cover;
-        }
-        #google{
-            @extend .span-size;
-            background: url(../images/brands/googlesm.png) center; 
-            background-size: cover;
-            height:3.5rem;
-        }
-        #buzz{
-            @extend .span-size;
-            background: url(../images/brands/buzzfeedsm.png)center; 
-            background-size: cover;
-            width: 14rem;
-            height: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        #toggle{
-            @extend .span-size;
-            background: url(../images/brands/Togglesm.png) center; 
-            background-size: cover;
-            height:3rem;
-        }
-        #walmart{
-            @extend .span-size;
-            background: url(../images/brands/walmartsm.png) left; 
-            background-size: cover;
-            width: 13.5rem;
-            height:3.5rem;
-            margin-bottom: 1rem;
-        }
-
-    }
-}
-//start about us section
-#aboutUs{
-    @include flex-center(); 
-    flex-direction: row;
-    padding: 2rem 0 2rem 0;
-    gap: 10rem;
-    div{
-        @include flex-column();
-        align-items: flex-start;
-        width: 38vw;
-        .btn{
-            @include btn();
-            margin-bottom: 4rem;
-        }
-        .btn:hover{
-            @include outline-btn();
-        } 
-        .outline-btn{
-            @include outline-btn()
-        }
-        .outline-btn:hover{
-            @include btn()
-        }
-        img{
-            @extend .img-size;
-        }
-    }
-    h2{
-            color: $brown-color;
-            font-size: 7rem;
-            font-weight: 400;
-            margin: 4rem 0 0 0;
-    }
-    p{
-       @include paragraph()  
-    }
-    
-}
-//start products section
-#products{
-    @extend #aboutUs;
-    flex-direction: column;
-    gap:6rem;
-    justify-content: center;
-    width: 100%;
-    #products-img-span{
-        @include inline-flex() ;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10rem;
-    }
-    div{
-        justify-content: flex-start;
-        gap:0;
-
-        #product-title{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        #product-title-h2, #product-title-describe{
-         margin:0 auto;
-        }
-        #products-img-span {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            gap:10rem;
-        }
-       
-        button{
-            margin-top: 3rem;
-        }
-        .btn-span{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 30vw;
-        }
-        .analytic-span {
-            display: flex;
-            flex-direction: row;
-            width:20vw;
-            margin:2rem 0 2rem 0;
-            gap:2rem
-            
-        }
-        .analytic-span span{
-            @include flex-column();
-            justify-content: center;
-            p{
-                font-size: 1.4rem;
-            } 
-        }
-        .analytic-span p{
-            width:10vw;
-            margin-top: 1rem;
-        }
-        
-        .analytic{
-            width: fit-content;
-            font-size: 3rem;
-            font-weight: 500;
-            color: $analytic-blue;
-            border-bottom: $brown-color solid 3px;
-        }
-    }
-    
-}
-//start analytics section
-#analytics{
-    @include flex-center();
-    background-color: $lighter-pink;
-    text-align: center;
-    padding: 2rem 0 2rem 0;
-    gap:2rem;
-    span{
-        @include flex-column();
-        width: 38rem;
-        height:10rem;
-        gap:0;
-    }
-    .analytics-title{
-        color: $brown-color;
-        font-size: 3.5rem;
-        font-weight: bold;
-    }
-    .analytics-describe{
-        color: gray;
-        font-size: 2rem;
-        font-weight: 400;
-    }
-    .right-border{
-        border-right: $brown-color solid 3px;
-        padding-right: 2rem;
-    }
-    .left-border{
-        border-left: $brown-color solid 3px;
-        padding-left: 2rem;
-    }
-}
-//start the last part of product
-#another-product{
-    @include inline-flex();
-    padding: 8rem 2rem 8rem 2rem;
-    gap:6rem;
-    .section-parts{
-        @include inline-flex();
-        width: 47rem;
-        height:50rem;
-        gap:0;
-    }
-    #describe-span{
-        @include flex-column();
-        align-items:flex-start;
-    }
-    #behind-span{
-        min-width: 47rem;
-        min-height: 50rem;
-        background-color: $brand-color1;
-        margin-top: 5rem;
-        margin-left: 10rem;
-    }
-    #infront-img{
-        width: 47rem;
-        height: 50rem;
-        margin-left: -44rem;
-    }
-    p{
-        @include paragraph()  
-     }
-    .btn{
-        @include btn(); 
-    }
-    .btn:hover{
-        @include outline-btn();
-    }
-}
-//start the last part of product
-#customers{
-    @include flex-column();
-    @extend #aboutUs;
-    gap:6rem;
-    background-color: $light-pink;
-    padding-bottom: 10rem;
-    justify-content: center;
-    width: 100%;
-
-    #customer-cards{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap:3rem
-    }
-    #title-span{
-        @include flex-column();
-    }
-    #arrows{
-        @include inline-flex();
-        justify-content: flex-end;
-        flex-direction: row;
-        width: 95rem;
-    }
-    h2{
-        width: 80rem;
-    }
-    .arrows-span{
-        @include flex-center();
-        min-width: 4rem;
-        min-height: 4rem;
-        border: $brown-color solid 1px;
-        border-radius: 100%;
-        color: $brown-color;
-        font-size: 1.5rem;
-    }
-    .arrows-span:hover{
-        background-color: $brown-color;
-        color: $light-gray-color;
-    }
-    .costumer-div{
-        width: 32rem;
-        height: 40rem;
-        padding: 3rem;
-        background-color: $white-color;
-    }
-    .costumer-div:hover{
-        box-shadow:  0 0 30px $light-gray-color;
-    }
-    .stars {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        color: $stars-color;
-        font-size: 1.2rem;
-        gap: 0;
-    }
-    .customer-oponion{
-        width: 27rem;
-    }
-    .customer-info{
-        @include inline-flex();
-        flex-direction: row;
-        div{
-            gap: 0;
-        }
-    }
-    .customer-img{
-        width: 5rem;
-        height: 5rem; 
-        border-radius: 100%;
-    }
-    .customer-name{
-        color: $brown-color;
-        font-size: 1.4rem;
-        font-weight: 500;
-    }
-    .customer-role{
-        font-size: 1.3rem;
-    }
-   
-}
-//start footer 
-footer{
-    @include flex-column();
-    #footer-menus, #footer-menus-span{
-        
-        @include inline-flex();  
-        gap: 10rem;
-        align-items: flex-start;
-        #footer-brand{
-            color: $brown-color;
-            font-size: 2.5rem;
-            font-weight: bold;
-            font-family: 'Raleway';
-            margin-bottom: 2rem;
-        }
-        p{
-            @include paragraph();
-        }
-        h5{
-            @extend #footer-brand;
-            font-family: 'Poppins', sans-serif;
-            font-weight: lighter;
-        }
-        ul{
-            list-style-type: none;
-            li{
-                margin-bottom: 1rem;
-            }
-        }
-        a{
-            text-decoration: none;
-            color: gray;
-            font-size: 1.5rem;
-            
-        }
-    }
-    #footer-menus{
-        padding-top: 10rem;
-    }
-    #footer-socials-span{
-        @include inline-flex();
-        justify-content: flex-start;
-        width: 80vw;
-        padding-bottom: 3rem;
-        border-bottom: $light-gray-color solid 2px;
-    }
-    .footer-socials{
-        @include flex-center();
-        min-width: 4rem;
-        min-height: 4rem;
-        border: $brown-color solid 1px;
-        border-radius: 100%;
-        color: $light-gray-color;
-        background-color: $brown-color;
-        font-size: 1.5rem;
-    }
-    .footer-socials:hover{
-        background-color: $light-gray-color;
-        color: $brown-color;
-    }
-    #copy-right-span{
-        @include inline-flex();
-        padding-bottom: 2rem;
-        text-align: center;
-        p{
-            @include paragraph()
-        }
-    }
+.img-size, #aboutUs div img, #customers div img, #products div img {
+  width: 52rem;
+  height: 55rem;
 }
 
+section {
+  max-width: 100vw;
+}
+
+h3 {
+  color: #463232;
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 2rem 0 0 0;
+}
+
+.discribe {
+  width: 50vw;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+header {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 5rem 2.5rem 5rem;
+  background: linear-gradient(0.25turn, rgb(241, 215, 200), rgb(239, 210, 194), rgb(246, 214, 196));
+}
+header ul {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+header li {
+  color: #463232;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+header #brand {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  color: #463232;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Raleway";
+}
+header #menu {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  color: #463232;
+  font-size: 1.6rem;
+}
+
+#intro {
+  background: url(../images/products/p1.jpg) no-repeat center;
+  background-size: cover;
+  padding-bottom: 4rem;
+}
+#intro h1 {
+  color: #463232;
+  font-family: "open sans";
+  font-size: 8rem;
+  letter-spacing: -0.6rem;
+  text-align: center;
+}
+#intro p {
+  max-width: 25vw;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 8rem 0rem 0 8rem;
+}
+#intro .btn {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
+  transition: all 200ms ease-in-out;
+  margin: 4rem 8rem;
+}
+#intro .btn:hover {
+  background-color: white;
+  color: #463232;
+  border: 0.1rem solid #463232;
+  transition: all 200ms ease-in-out;
+}
+#intro .search-box {
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  margin: 4rem 8rem;
+  background: rgba(243, 243, 243, 0.993);
+}
+#intro .search-box input {
+  background: rgba(243, 243, 243, 0.993);
+  padding: 0.8rem 0.8rem;
+  border: 0;
+  outline: none;
+  color: #c1c1c1;
+}
+#intro .search-box #search-button {
+  background: #463232;
+  padding: 0.8rem 0.9rem 0.8rem 0.9rem;
+  color: rgba(243, 243, 243, 0.993);
+  font-size: 1.5rem;
+  border: none;
+}
+#intro .search-box #search-button :hover {
+  cursor: pointer;
+}
+
+#lenders {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(254, 246, 240);
+  padding: 4rem;
+}
+#lenders h2 {
+  color: #463232;
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+#lenders .lendors-logo {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+#lenders .lendors-logo .span-size, #lenders .lendors-logo #walmart, #lenders .lendors-logo #toggle, #lenders .lendors-logo #buzz, #lenders .lendors-logo #google, #lenders .lendors-logo #asana, #lenders .lendors-logo #chase {
+  width: 10.5rem;
+  height: 2.5rem;
+}
+#lenders .lendors-logo #chase {
+  background: url(../images/brands/chasesm.png);
+  background-size: cover;
+}
+#lenders .lendors-logo #asana {
+  background: url(../images/brands/asanasm.png) right;
+  background-size: cover;
+}
+#lenders .lendors-logo #google {
+  background: url(../images/brands/googlesm.png) center;
+  background-size: cover;
+  height: 3.5rem;
+}
+#lenders .lendors-logo #buzz {
+  background: url(../images/brands/buzzfeedsm.png) center;
+  background-size: cover;
+  width: 14rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+#lenders .lendors-logo #toggle {
+  background: url(../images/brands/Togglesm.png) center;
+  background-size: cover;
+  height: 3rem;
+}
+#lenders .lendors-logo #walmart {
+  background: url(../images/brands/walmartsm.png) left;
+  background-size: cover;
+  width: 13.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+#aboutUs, #customers, #products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem 0 2rem 0;
+  gap: 10rem;
+}
+#aboutUs div, #customers div, #products div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 38vw;
+}
+#aboutUs div .btn, #customers div .btn, #products div .btn {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
+  transition: all 200ms ease-in-out;
+  margin-bottom: 4rem;
+}
+#aboutUs div .btn:hover, #customers div .btn:hover, #products div .btn:hover {
+  background-color: white;
+  color: #463232;
+  border: 0.1rem solid #463232;
+  transition: all 200ms ease-in-out;
+}
+#aboutUs div .outline-btn, #customers div .outline-btn, #products div .outline-btn {
+  background-color: white;
+  color: #463232;
+  border: 0.1rem solid #463232;
+  transition: all 200ms ease-in-out;
+}
+#aboutUs div .outline-btn:hover, #customers div .outline-btn:hover, #products div .outline-btn:hover {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+#aboutUs h2, #customers h2, #products h2 {
+  color: #463232;
+  font-size: 7rem;
+  font-weight: 400;
+  margin: 4rem 0 0 0;
+}
+#aboutUs p, #customers p, #products p {
+  width: 33vw;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: gray;
+}
+
+#products {
+  flex-direction: column;
+  gap: 6rem;
+  justify-content: center;
+  width: 100%;
+}
+#products #products-img-span {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+}
+#products div {
+  justify-content: flex-start;
+  gap: 0;
+}
+#products div #product-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#products div #product-title-h2, #products div #product-title-describe {
+  margin: 0 auto;
+}
+#products div #products-img-span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10rem;
+}
+#products div button {
+  margin-top: 3rem;
+}
+#products div .btn-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30vw;
+}
+#products div .analytic-span {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  margin: 2rem 0 2rem 0;
+  gap: 2rem;
+}
+#products div .analytic-span span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+#products div .analytic-span span p {
+  font-size: 1.4rem;
+}
+#products div .analytic-span p {
+  width: 10vw;
+  margin-top: 1rem;
+}
+#products div .analytic {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(0, 85, 125);
+  border-bottom: #463232 solid 3px;
+}
+
+#analytics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(254, 246, 240, 0.3);
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  gap: 2rem;
+}
+#analytics span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  width: 38rem;
+  height: 10rem;
+  gap: 0;
+}
+#analytics .analytics-title {
+  color: #463232;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+#analytics .analytics-describe {
+  color: gray;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#analytics .right-border {
+  border-right: #463232 solid 3px;
+  padding-right: 2rem;
+}
+#analytics .left-border {
+  border-left: #463232 solid 3px;
+  padding-left: 2rem;
+}
+
+#another-product {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding: 8rem 2rem 8rem 2rem;
+  gap: 6rem;
+}
+#another-product .section-parts {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  width: 47rem;
+  height: 50rem;
+  gap: 0;
+}
+#another-product #describe-span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  align-items: flex-start;
+}
+#another-product #behind-span {
+  min-width: 47rem;
+  min-height: 50rem;
+  background-color: rgb(241, 215, 200);
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+#another-product #infront-img {
+  width: 47rem;
+  height: 50rem;
+  margin-left: -44rem;
+}
+#another-product p {
+  width: 33vw;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: gray;
+}
+#another-product .btn {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+#another-product .btn:hover {
+  background-color: white;
+  color: #463232;
+  border: 0.1rem solid #463232;
+  transition: all 200ms ease-in-out;
+}
+
+#customers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  gap: 6rem;
+  background-color: rgb(254, 246, 240);
+  padding-bottom: 10rem;
+  justify-content: center;
+  width: 100%;
+}
+#customers #customer-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+#customers #title-span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+#customers #arrows {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 95rem;
+}
+#customers h2 {
+  width: 80rem;
+}
+#customers .arrows-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  border: #463232 solid 1px;
+  border-radius: 100%;
+  color: #463232;
+  font-size: 1.5rem;
+}
+#customers .arrows-span:hover {
+  background-color: #463232;
+  color: rgba(243, 243, 243, 0.993);
+}
+#customers .costumer-div {
+  width: 32rem;
+  height: 40rem;
+  padding: 3rem;
+  background-color: rgb(255, 255, 255);
+}
+#customers .costumer-div:hover {
+  box-shadow: 0 0 30px rgba(243, 243, 243, 0.993);
+}
+#customers .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: rgb(253, 138, 118);
+  font-size: 1.2rem;
+  gap: 0;
+}
+#customers .customer-oponion {
+  width: 27rem;
+}
+#customers .customer-info {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: row;
+}
+#customers .customer-info div {
+  gap: 0;
+}
+#customers .customer-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+#customers .customer-name {
+  color: #463232;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+#customers .customer-role {
+  font-size: 1.3rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+footer #footer-menus, footer #footer-menus-span {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  gap: 10rem;
+  align-items: flex-start;
+}
+footer #footer-menus #footer-brand, footer #footer-menus h5, footer #footer-menus-span #footer-brand, footer #footer-menus-span h5 {
+  color: #463232;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Raleway";
+  margin-bottom: 2rem;
+}
+footer #footer-menus p, footer #footer-menus-span p {
+  width: 33vw;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: gray;
+}
+footer #footer-menus h5, footer #footer-menus-span h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+footer #footer-menus ul, footer #footer-menus-span ul {
+  list-style-type: none;
+}
+footer #footer-menus ul li, footer #footer-menus-span ul li {
+  margin-bottom: 1rem;
+}
+footer #footer-menus a, footer #footer-menus-span a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.5rem;
+}
+footer #footer-menus {
+  padding-top: 10rem;
+}
+footer #footer-socials-span {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start;
+  width: 80vw;
+  padding-bottom: 3rem;
+  border-bottom: rgba(243, 243, 243, 0.993) solid 2px;
+}
+footer .footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4rem;
+  min-height: 4rem;
+  border: #463232 solid 1px;
+  border-radius: 100%;
+  color: rgba(243, 243, 243, 0.993);
+  background-color: #463232;
+  font-size: 1.5rem;
+}
+footer .footer-socials:hover {
+  background-color: rgba(243, 243, 243, 0.993);
+  color: #463232;
+}
+footer #copy-right-span {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+footer #copy-right-span p {
+  width: 33vw;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: gray;
+}/*# sourceMappingURL=style.css.map */
