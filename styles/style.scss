@@ -248,6 +248,7 @@ header #menu {
   flex-direction: column;
   gap: 6rem;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 #products #products-img-span {
@@ -261,6 +262,7 @@ header #menu {
 }
 #products div {
   justify-content: flex-start;
+  align-items: center;
   gap: 0;
 }
 #products div #product-title {
@@ -275,6 +277,7 @@ header #menu {
 #products div #products-img-span {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 10rem;
 }
@@ -415,7 +418,7 @@ header #menu {
 #customers {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   gap: 6rem;
@@ -428,6 +431,7 @@ header #menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 3rem;
 }
 #customers #title-span {
@@ -439,7 +443,7 @@ header #menu {
 }
 #customers #arrows {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   justify-content: flex-end;
