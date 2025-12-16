@@ -293,8 +293,10 @@ header #menu {
 #products div .analytic-span {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+    align-items: center; 
   width: 20vw;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem auto; 
   gap: 2rem;
 }
 #products div .analytic-span span {
@@ -312,6 +314,7 @@ header #menu {
   width: 10vw;
   margin-top: 1rem;
 }
+
 #products div .analytic {
   width: -moz-fit-content;
   width: fit-content;
